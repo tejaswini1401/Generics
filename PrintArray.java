@@ -1,24 +1,15 @@
 package generics;
 public class PrintArray {
-    public static void toPrint(int[] array) {
-        for (int element : array) {
-            System.out.println(element);
+	public static <E> void toPrint(E[] array) {
+        for (E element : array) {
+            System.out.print(element + " ");
         }
-    }
-    public static void toPrint(double[] array) {
-        for (double element : array) {
-            System.out.println(element);
-        }
-    }
-    public static void toPrint(char[] array) {
-        for (char element : array) {
-            System.out.println(element);
-        }
+        System.out.println();
     }
     public static void main(String[] args) {
-        int[] integers = {1, 2, 3, 4, 5};
-        double[] doubles = {1.1, 2.2, 3.3, 4.4, 5.5};
-        char [] characters = {'a', 'b', 'c', 'd', 'e'};
+        Integer[] integers = {1, 2, 3, 4, 5};
+        Double[] doubles = {1.1, 2.2, 3.3, 4.4, 5.5};
+        Character [] characters = {'a', 'b', 'c', 'd', 'e'};
 
         System.out.println("Integer Array:");
         toPrint(integers);
